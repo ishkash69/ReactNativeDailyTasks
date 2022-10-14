@@ -7,9 +7,10 @@ export const styles = StyleSheet.create({
         paddingVertical:24,
     },
     header:{
-        flex: 1,
-        justifyContent:"space-between",
+        // justifyContent:"space-between",
+
         flexDirection:"row",
+        alignItems: "center",
     },
     imageStyle:{
         height:40,
@@ -18,7 +19,7 @@ export const styles = StyleSheet.create({
     textViewStyle:{
         flex:1,
         alignItems:'center',
-        justifyContent:'center'
+        justifyContent:'center',
     },
     textStyle:{
         color:"black",
@@ -33,6 +34,10 @@ export const styles = StyleSheet.create({
         borderRadius:10,
         justifyContent:'center',
         alignItems:'center'
+    }
+    ,
+    input:{
+        marginTop:20
     }
 
 })
