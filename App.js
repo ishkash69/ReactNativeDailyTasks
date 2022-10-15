@@ -6,8 +6,9 @@
  * @flow strict-local
  */
 
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
+  KeyboardAvoidingView,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -19,23 +20,30 @@ import {
 import Home from './src/Screens/Home/Home';
 
 
-class App extends Component{
-  constructor(){
+class App extends Component {
+  constructor() {
     super();
   }
-  render(){
-    return(
-      <View style={styles.container}>
-      <Home/>
-      </View>
+  render() {
+    return (
+        
+        <View style={styles.container}>
+          <Home />
+        </View>
+      
+
+        
+
+      
+
 
     )
   }
 }
 const styles = StyleSheet.create({
-  container:{
+  container: {
     flex: 1,
-  
+
   }
 })
 

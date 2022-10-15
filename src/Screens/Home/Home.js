@@ -12,12 +12,36 @@ export default class Home extends Component {
             message: 'My App',
             firstName: '',
             lastName: '',
-            age:null,
+            age:'',
             email:''
         }
     }
-    
-    
+    validateForm =()=> {
+        const {firstName,lastName,age,email}=this.state
+    //     if(firstName=='' || lastName==""||age==null||email==""){
+    //         alert("please enter your details")
+    //     }
+    //     else{
+    //         alert(firstName+"\n"+lastName+"\n"+age+"\n"+email+"\n")
+    // }
+    if(firstName.length==0){
+        alert("please enter your first name")
+        return
+    }if(lastName.length==0){
+        alert("please enter your last name")
+        return
+    }if(age===''){
+        alert('please enter your age')
+        return
+    }if(email.length==0){
+        alert("please enter your email")
+        return
+    }
+    else{
+        alert(firstName+"\n"+lastName+"\n"+age+"\n"+email+"\n") 
+        return
+    }
+    }
   render()
   {
     const {firstName,lastName,age,email}=this.state
@@ -60,6 +84,7 @@ export default class Home extends Component {
         onChangeText={(firstName)=>{
             this.setState({firstName})
         }}
+        inputStyling={{backgroundColor:"#6759"}}
         />
          <TextInputComp
         placeholder={"Enter Last Name"}
@@ -67,7 +92,10 @@ export default class Home extends Component {
         value={lastName}
         onChangeText={(lastName)=>{
             this.setState({lastName})
-        }}      
+        
+        }}  
+        
+           
         />
          <TextInputComp
         placeholder={"Enter your age"}
@@ -93,9 +121,9 @@ export default class Home extends Component {
         
         <ButtonComp
         buttonText={"Click Me"}
-        onPress={()=>{
-            alert(firstName+"\n"+lastName+"\n"+age+"\n"+email+"\n")
-        }}
+        onPress={
+this.validateForm
+        }
         >
             
         </ButtonComp>

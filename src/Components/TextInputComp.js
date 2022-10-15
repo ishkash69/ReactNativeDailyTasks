@@ -9,6 +9,7 @@ const TextInputComp = ({
     onChangeText = ()=>{},
     keyBoardtype,
     value,
+    required=false,
 }) => {
     return (
         <View style={{...styles.input,...inputStyling}}>
@@ -18,6 +19,8 @@ const TextInputComp = ({
              onChangeText={onChangeText}
              keyboardType={keyBoardtype}
              value={value}
+             required={required}
+             
             >
 
             </TextInput>
@@ -37,8 +40,8 @@ const styles = StyleSheet.create({
         borderRadius: 7,
         flexDirection: "row",
         paddingHorizontal: 20,
-        alignItems: "center",
-        justifyContent: "center",
+        // alignItems: "center",
+        // justifyContent: "center",
       },
 
 });
